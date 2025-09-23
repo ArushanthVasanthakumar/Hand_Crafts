@@ -63,7 +63,7 @@ if(isset($_POST['submit'])){
    <link rel="stylesheet" href="css/components.css">
 
 </head>
-<body>
+<body style="background: url('images/reduced_blur_crafts_bg.png') no-repeat center center">
 
 <?php
 
@@ -84,10 +84,10 @@ if(isset($message)){
 
    <form action="" enctype="multipart/form-data" method="POST">
       <h3>register now</h3>
-      <input type="text" name="name" class="box" placeholder="enter your name" required>
-      <input type="email" name="email" class="box" placeholder="enter your email" required>
-      <input type="password" name="pass" class="box" placeholder="enter your password" required>
-      <input type="password" name="cpass" class="box" placeholder="confirm your password" required>
+      <input type="text" name="name" class="box" placeholder="Enter your name" required>
+      <input type="email" name="email" class="box" placeholder="Enter your email" required>
+      <input type="password" name="pass" class="box" placeholder="Enter your password" required>
+      <input type="password" name="cpass" class="box" placeholder="Confirm your password" required>
       <input type="file" name="image" class="box" required accept="image/jpg, image/jpeg, image/png">
       <input type="submit" value="register now" class="btn" name="submit">
       <p>already have an account? <a href="login.php">login now</a></p>

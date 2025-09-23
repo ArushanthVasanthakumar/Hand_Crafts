@@ -39,10 +39,10 @@ if(isset($_POST['add_product'])){
 
       if($insert_products){
          if($image_size > 20000000){
-            $message[] = 'image size is too large!';
+            $message[] = 'Image size is too large!';
          }else{
             move_uploaded_file($image_tmp_name, $image_folder);
-            $message[] = 'new product added!';
+            $message[] = 'New product added!';
          }
 
       }
@@ -97,7 +97,7 @@ if(isset($_GET['delete'])){
    <form action="" method="POST" enctype="multipart/form-data">
       <div class="flex">
          <div class="inputBox">
-         <input type="text" name="name" class="box" required placeholder="enter product name">
+         <input type="text" name="name" class="box" required placeholder="Enter product name">
          <select name="category" class="box" required>
             <option value="" selected disabled>Select category</option>
                <option value="cloth">Cloth & Handloom Products</option>
@@ -107,11 +107,11 @@ if(isset($_GET['delete'])){
          </select>
          </div>
          <div class="inputBox">
-         <input type="number" min="0" name="price" class="box" required placeholder="enter product price">
+         <input type="number" min="0" name="price" class="box" required placeholder="Enter product price">
          <input type="file" name="image" required class="box" accept="image/jpg, image/jpeg, image/png">
          </div>
       </div>
-      <textarea name="details" class="box" placeholder="enter product details" cols="30" rows="10"></textarea>
+      <textarea name="details" class="box" placeholder="Enter product details" cols="30" rows="10"></textarea>
       <input type="submit" class="btn" value="add product" name="add_product">
    </form>
 

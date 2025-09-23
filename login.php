@@ -57,7 +57,7 @@ if(isset($_POST['submit'])){
    <link rel="stylesheet" href="css/components.css">
 
 </head>
-<body>
+<body style="background: url('images/reduced_blur_crafts_bg.png') no-repeat center center">
 
 <?php
 
@@ -74,7 +74,7 @@ if(isset($message)){
 
 ?>
    
-<section class="form-container">
+<section class="form-container" >
 
    <form action="" method="POST">
       <h3>Login now</h3>

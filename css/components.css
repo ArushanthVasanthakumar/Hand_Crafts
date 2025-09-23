@@ -46,7 +46,10 @@
 
 body{
    background-color: var(--light-bg);
-  
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   margin: 0;
    /* padding-bottom: 6.5rem; */
 }
 
@@ -55,7 +58,10 @@ html{
    overflow-x: hidden;
    scroll-behavior: smooth;
    scroll-padding-top: 6.5rem;
-   
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   margin: 0;
 }
 
 section{
@@ -261,20 +267,9 @@ section{
 }
 
 
-/*
-.header .flex{
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   padding:2rem;
-   margin: 0 auto;
-   max-width: 1200px;
-   position: relative;
-}
-*/
 .header .flex .logo{
    font-size: 2.5rem;
-   font-style:comic ;
+   font-weight: bold ;
    color:var(--black);
 }
 
@@ -319,6 +314,12 @@ section{
 #menu-btn{
    display: none;
 }
+
+.header .flex .navbar {
+   display: flex; /* show navbar links */
+   gap: 2rem;
+}
+
 .header .flex .icons .fa-user, /* CHANGED */
 .header .flex .icons .fa-shopping-cart, /* CHANGED */
 .header .flex .icons .fa-heart, /* CHANGED */
@@ -342,19 +343,7 @@ section{
    animation: fadeIn .2s linear;
 }
 
-.header .flex .profile{
-   position: absolute;
-   top:120%; right:2rem;
-   box-shadow: var(--box-shadow);
-   border:var(--border);
-   border-radius: .5rem;
-   padding:2rem;
-   text-align: center;
-   background-color: var(--white);
-   width: 33rem;
-   display: none;
-   animation: fadeIn .2s linear;
-}
+
 
 .header .flex .profile.active{
    display: inline-block;
@@ -431,7 +420,7 @@ section{
    position: fixed;
    top: 0;
    left: -60%;  /* hidden by default */
-   padding: 20px;
+   padding: 10px;
    transition: 0.4s;
    z-index: 2000;
    box-shadow: 2px 0 10px rgba(0,0,0,0.3); /* optional shadow */
@@ -445,19 +434,17 @@ section{
 .side-navbar-link {
    display: block;
    margin: 20px 0;
-}
-
-.side-navbar-link a {
+   font-size: 20px;
    text-decoration: none;
-   color: var(--white) !important;     /* White text */
-   font-size: 2.5rem !important;       /* 25px */
+   color:#fff;     /* White text */
    font-weight: 500;
    transition: 0.2s;
+   padding: 20px;
 }
 
-.side-navbar-link a:hover {
+.side-navbar-link:hover {
    text-decoration: underline;
-   color: var(--orange);    /* Highlight color when hover */
+
 }
 
 /* Close (X) button inside side-navbar */
@@ -466,6 +453,35 @@ section{
    color: var(--white);
    cursor: pointer;
 }
+
+/* Different hover colors for each link */
+.side-navbar-link:nth-child(1):hover { 
+   background-color: rgb(81, 19, 2); 
+   color: var(--white);
+}
+
+.side-navbar-link:nth-child(2):hover { 
+   background-color: rgb(81, 19, 2); 
+   color: var(--white);
+}
+
+.side-navbar-link:nth-child(3):hover { 
+   background-color: rgb(81, 19, 2); 
+   color: var(--white);
+}
+
+.side-navbar-link:nth-child(4):hover { 
+   background-color: rgb(81, 19, 2); 
+   color: var(--white);
+}
+
+.side-navbar-link:nth-child(5):hover { 
+   background-color: rgb(81, 19, 2); 
+   color: var(--white);
+}
+
+
+
 
 
 
@@ -552,16 +568,16 @@ section{
    #menu-btn{
       display: inline-block;
    }
-
-   .header .f lex .icons .fa-user,
+   
+   .header .flex .icons .fa-user,
    .header .flex .icons .fa-shopping-cart,
    .header .flex .icons .fa-heart, 
    .header .flex .icons .fa-search{ 
-      display: none; /* CHANGED: hide other icons */
+      display: none; /*hide other icons */
    }
 
    .header .flex .navbar{
-      display: flex;
+      display: none;
       border-top: var(--border);
       border-bottom: var(--border);
       background-color: var(--white);
@@ -569,6 +585,10 @@ section{
       top:99%; left:0; right:0;
       transition: .2s linear;
       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+   }
+
+   .header .flex .icons .fa-user {
+      display: inline-block; /* keep profile visible */
    }
 
    .header .flex .navbar.active{
