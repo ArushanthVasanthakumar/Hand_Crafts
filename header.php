@@ -51,7 +51,7 @@ if(isset($message)){
       <a class="side-navbar-link" href="orders.php">Orders</a>
       <a class="side-navbar-link" href="about.php">About</a>
       <a class="side-navbar-link" href="contact.php">Contact</a>
-       <a class="side-navbar-link" href="contact.php">Profile</a>
+      
    </div>
 
       </div>
