@@ -1,20 +1,17 @@
+
 let profile = document.querySelector('.header .flex .profile');
 let sidenav = document.querySelector(".side-navbar");
+let menuBtn = document.querySelector('#menu-btn');
+let closeBtn = document.querySelector('.side-navbar .fa-xmark');
 
 // menu button → open side navbar
-document.querySelector('#menu-btn').onclick = () => {
+ menuBtn.onclick = () => {
    sidenav.style.left = "0";   // slide in
    profile.classList.remove('active'); // hide profile if open
 }
 
-// user button → toggle profile
-document.querySelector('#user-btn').onclick = () => {
-   profile.classList.toggle('active');
-   sidenav.style.left = "-60%"; // close side navbar if profile is open
-}
-
 // close side navbar (X icon)
-function closeNavbar(){
+closeBtn.onclick = () => {
    sidenav.style.left = "-60%"; // slide out
 }
 
