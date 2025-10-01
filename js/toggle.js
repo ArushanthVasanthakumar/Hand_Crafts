@@ -1,6 +1,6 @@
 
    let userBtn = document.querySelector('#user-btn');
-   let profile = document.querySelector('.profile');
+   let profile = document.querySelector('.header .flex .profile');
 
    // Toggle profile when clicking the user button
    userBtn.onclick = () => {

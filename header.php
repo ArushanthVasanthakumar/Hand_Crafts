@@ -28,7 +28,7 @@ if(isset($message)){
       </nav>
 
       <div class="icons">
-         
+      
          <a href="search_page.php" class="fas fa-search"></a>
          <?php
             $count_cart_items = $conn->prepare("SELECT * FROM cart WHERE user_id = ?");
@@ -44,7 +44,7 @@ if(isset($message)){
      
      
       <!--Side navbar-->
-   <div class="side-navbar">
+ <div class="side-navbar">
    <p style="text-align: right"><i class="fa-solid fa-xmark" onclick="closeNavbar()"></i></p>
    <div class="side-navbar-links">
       <a class="side-navbar-link" href="home.php">Home</a>
@@ -55,8 +55,10 @@ if(isset($message)){
       
    </div>
 
-      </div>
+ </div>
 
+
+     <!-- User profile box -->
     <div class="profile">
          <?php
             $select_profile = $conn->prepare("SELECT * FROM users WHERE id = ?");
@@ -80,11 +82,32 @@ if(isset($message)){
          <?php endif; ?>
       </div>
 
-
-
-
-      
-     <script src="js/toggle.js"></script>
    </div>
 
 </header>
+
+
+<script>
+// Profile toggle functionality
+document.addEventListener('DOMContentLoaded', function() {
+   const userBtn = document.getElementById('user-btn');
+   const profile = document.querySelector('.profile');
+   
+   if (userBtn && profile) {
+      userBtn.addEventListener('click', function(e) {
+         e.stopPropagation();
+         profile.classList.toggle('active');
+      });
+
+      document.addEventListener('click', function(e) {
+         if (!userBtn.contains(e.target) && !profile.contains(e.target)) {
+            profile.classList.remove('active');
+         }
+      });
+   }
+});
+</script>
+
+<script src="js/script.js"></script>
+      
+<script src="js/toggle.js"></script>
