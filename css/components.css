@@ -235,6 +235,16 @@ section{
 }
 
 
+
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 28px;
+    color: #4B3621;
+    text-decoration: none;
+}
+
+
 /*navbar change*/
 .header .flex {
    display: flex;
@@ -242,7 +252,7 @@ section{
    justify-content: space-between;
    padding:15px;
    position: relative;
-   
+
 }
 /* Move navbar to right */
 .header .flex .navbar {
@@ -268,8 +278,9 @@ section{
 
 
 .header .flex .logo{
-   font-size: 2.5rem;
-   font-weight: bold ;
+   
+   font-size: 30px;
+   font-weight: 700 ;
    color:var(--black);
 }
 
@@ -479,6 +490,10 @@ section{
    background-color: rgb(81, 19, 2); 
    color: var(--white);
 }
+
+
+
+
 
 
 
