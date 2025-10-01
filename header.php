@@ -13,15 +13,16 @@ if(isset($message)){
 ?>
 
 <header class="header">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
 
    <div class="flex">
-
+     
       <a href="admin_page.php" class="logo">Ceylon Crafts<span></span></a>
 
       <nav class="navbar">
          <a href="home.php">Home</a>
          <a href="shop.php">Shop</a>
-         <a href="orders.php">Orders</a>
+        
          <a href="about.php">About</a>
          <a href="contact.php">Contact</a>
       </nav>
@@ -69,6 +70,7 @@ if(isset($message)){
             <p><?= $fetch_profile['name']; ?></p>
             <a href="user_profile_update.php" class="btn">Update profile</a>
             <a href="logout.php" class="delete-btn">Logout</a>
+             <a href="orders.php" class="option-btn">Orders</a>
          <?php else: ?>
             <!-- If not logged in -->
             <div class="flex-btn">

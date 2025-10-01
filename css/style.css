@@ -98,6 +98,73 @@
    padding-bottom: 0;
 }
 
+
+
+
+
+
+/*shop btn fix*/
+.products .box {
+   background: var(--white);
+   border: var(--border);
+   box-shadow: var(--box-shadow);
+   border-radius: 1rem;
+   padding: 2rem;
+   text-align: center;
+
+   /* make equal height + flex layout */
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   min-height: 420px; /* adjust as you need */
+}
+
+.products .box img {
+   width: 100%;
+   max-height: 200px;
+   object-fit: contain;
+   margin-bottom: 1rem;
+}
+
+.products .box .name {
+   font-size: 1.8rem;
+   margin: 1rem 0;
+   flex-grow: 1; /* pushes buttons down */
+}
+
+.products .box .price {
+   font-size: 2rem;
+   color: var(--darkwood);
+   margin-bottom: 1rem;
+}
+
+/* Button group at bottom */
+.products .box .btn-group {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   margin-top: auto;
+}
+
+/* Equal width buttons */
+.products .box .btn,
+.products .box .option-btn {
+   width: 100%;
+   padding: 1rem;
+   font-size: 1.6rem;
+   border-radius: .5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
 .products .box-container{
    display: grid;
    grid-template-columns: repeat(3, 1fr);
@@ -259,16 +326,31 @@
    color: var(--white);
 }
 
+
+
 .about .row{
-   display: flex;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
    flex-wrap: wrap;
    gap:3rem;
-   align-items: center;
+   align-items: stretch;
 }
 
 .about .row .box{
+      border: var(--border);       /* ✅ Adds border */
+   border-radius: .5rem;        /* ✅ Optional rounded corners */
+   padding: 2rem;               /* ✅ Padding inside */
+   background: var(--white);    /* ✅ White background */
+   box-shadow: var(--box-shadow); /* ✅ Shadow for nice effect */
+   text-align: center;
+   transition: 0.3s ease;
+
    flex:1 1 40rem;
    text-align: center;
+}
+.about .row .box:hover {
+   transform: translateY(-5px); /* ✅ Small hover effect */
+   box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
 }
 
 .about .row .box img{
